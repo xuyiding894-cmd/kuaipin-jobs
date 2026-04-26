@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createStaticDemoApi, shouldUseStaticDemoApi } from "../src/staticDemoApi.js";
 
 test("shouldUseStaticDemoApi enables browser demo mode on GitHub Pages", () => {
-  assert.equal(shouldUseStaticDemoApi({ hostname: "xuyiding894-cmd.github.io" }), true);
+  assert.equal(shouldUseStaticDemoApi({ hostname: "mrcodehub.github.io" }), true);
   assert.equal(shouldUseStaticDemoApi({ hostname: "127.0.0.1" }), false);
   assert.equal(shouldUseStaticDemoApi({ hostname: "localhost" }), false);
 });

@@ -31,6 +31,6 @@ test("public crawler files point search engines to the GitHub Pages URL", async 
 
   assert.match(robots, /User-agent: \*/);
   assert.match(robots, /Allow: \//);
-  assert.match(robots, /Sitemap: https:\/\/xuyiding894-cmd\.github\.io\/kuaipin-jobs\/sitemap\.xml/);
-  assert.match(sitemap, /<loc>https:\/\/xuyiding894-cmd\.github\.io\/kuaipin-jobs\/<\/loc>/);
+  assert.match(robots, /Sitemap: https:\/\/mrcodehub\.github\.io\/kuaipin-jobs\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/mrcodehub\.github\.io\/kuaipin-jobs\/<\/loc>/);
 });
