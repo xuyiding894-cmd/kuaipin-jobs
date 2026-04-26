@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="快聘兼职">
+  <rect width="64" height="64" rx="14" fill="#126d63"/>
+  <path d="M16 18h32v6H16zM18 29h28v6H18zM16 40h32v6H16z" fill="#ffffff" opacity="0.24"/>
+  <path d="M20 17h8v10h13v7H28v13h-8V34h-7v-7h7z" fill="#ffffff"/>
+  <path d="M39 18h7v6h6v7h-6v15h-7V31h-7v-7h7z" fill="#f6c453"/>
+</svg>

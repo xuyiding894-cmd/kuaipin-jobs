@@ -1,0 +1,4 @@
+.worktrees/
+data/*.json
+outreach-ready/
+outreach-drafts-*.md
