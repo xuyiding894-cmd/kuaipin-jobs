@@ -13,10 +13,12 @@ import {
   emailDraftFields,
   outreachMessage
 } from "./outreach.js";
+import { createStaticDemoApi, shouldUseStaticDemoApi } from "./staticDemoApi.js";
 
 const app = document.querySelector("#app");
 const localeStorageKey = "quickshift.locale";
 const tokenStorageKey = "quickshift.token";
+const staticDemoApi = shouldUseStaticDemoApi(window.location) ? createStaticDemoApi() : null;
 
 const state = {
   jobs: [],
@@ -105,10 +107,14 @@ async function api(path, options = {}) {
     ...(options.body ? { "Content-Type": "application/json" } : {}),
     ...(state.token ? { Authorization: `Bearer ${state.token}` } : {})
   };
-  const response = await fetch(path, {
+  const requestOptions = {
     ...options,
     headers: { ...headers, ...(options.headers || {}) }
-  });
+  };
+
+  if (staticDemoApi) return staticDemoApi(path, requestOptions);
+
+  const response = await fetch(path, requestOptions);
   const data = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(data.error || "Request failed.");
   return data;

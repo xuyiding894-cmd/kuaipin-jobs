@@ -25,6 +25,12 @@ Then open:
 http://127.0.0.1:4173/
 ```
 
+## Public Demo
+
+The app can run on GitHub Pages as a browser-only demo. When it is opened from a public hostname, it uses local browser storage to simulate jobs, demo accounts, applications, reviews, referrals, and outreach leads.
+
+This demo mode is for product validation and sharing only. Real operations still need a backend database, production authentication, moderation, and payment integration.
+
 ## Test
 
 ```bash

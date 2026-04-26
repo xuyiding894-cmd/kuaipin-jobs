@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xuyiding894-cmd.github.io/kuaipin-jobs/sitemap.xml
